@@ -6,11 +6,32 @@
 #    By: awissade <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/17 16:05:12 by awissade          #+#    #+#              #
-#    Updated: 2024/03/17 16:14:47 by awissade         ###   ########.fr        #
+#    Updated: 2024/03/18 17:38:26 by awissade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+CC			=		cc
+CFLAGS		=		-Wextra -Werror -Wall
+
+
 NAME		=		push_swap
 
+S_FILES		=		main.c
+
+O_FILES		=		$(S_FILES:%.c=%.o)
 
 all			:		$(NAME)
+
+
+$(NAME)		:		$(O_FILES)
+			$(CC) $(CFLAGS) $(O_FILES) -o $(NAME)
+
+clean		:
+			rm -rf $(O_FILES)
+
+fclean		:		clean
+			rm -rf $(NAME)
+
+re			:		fclean all
+
+.PHONY		:		all clean fclean re
