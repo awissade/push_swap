@@ -6,7 +6,7 @@
 /*   By: awissade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 02:19:24 by awissade          #+#    #+#             */
-/*   Updated: 2024/03/18 18:08:20 by awissade         ###   ########.fr       */
+/*   Updated: 2024/03/18 23:32:58 by awissade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,4 @@
 
 int	main(int ac, char **av)
 {
-	
-	argument_validation(ac, av);
 }

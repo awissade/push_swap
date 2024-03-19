@@ -13,6 +13,8 @@
 CC			=		cc
 CFLAGS		=		-Wextra -Werror -Wall
 
+LIBFT_DIR	=		./libft
+LIBFT		=		$(LIBFT_DIR)/libft.a
 
 NAME		=		push_swap
 
@@ -23,14 +25,20 @@ O_FILES		=		$(S_FILES:%.c=%.o)
 all			:		$(NAME)
 
 
-$(NAME)		:		$(O_FILES)
-			$(CC) $(CFLAGS) $(O_FILES) -o $(NAME)
+$(NAME)		:		$(LIBFT) $(O_FILES)
+			$(CC) $(CFLAGS) $(O_FILES) $(LIBFT) -o $(NAME)
+
+$(LIBFT)	:
+			@make -C $(LIBFT_DIR)
+			@make -C $(LIBFT_DIR) bonus
 
 clean		:
 			rm -rf $(O_FILES)
+			@make -C $(LIBFT_DIR) clean
 
 fclean		:		clean
 			rm -rf $(NAME)
+			@make -C $(LIBFT_DIR) fclean
 
 re			:		fclean all
 
