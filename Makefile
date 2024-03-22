@@ -18,7 +18,7 @@ LIBFT		=		$(LIBFT_DIR)/libft.a
 
 NAME		=		push_swap
 
-S_FILES		=		main.c
+S_FILES		=		main.c help_functions/check_arguments.c
 
 O_FILES		=		$(S_FILES:%.c=%.o)
 

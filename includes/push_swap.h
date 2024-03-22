@@ -23,4 +23,6 @@ typedef struct s_stack
     struct s_stack *next;
 } t_stack;
 
+void	check_arguments(int ac, char **av);
+
 #endif
