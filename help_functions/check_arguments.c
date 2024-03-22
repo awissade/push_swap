@@ -59,9 +59,31 @@ void    check_is_int(int ac, char **av)
     }
 }
 
+void    check_for_duplicates(int ac, char **av)
+{
+    int i;
+    int j;
+
+    j = 1;
+    while (j < ac)
+    {
+        i = j + 1;
+        while (i < ac)
+        {
+            if (ft_atoi(av[j]) == ft_atoi(av[i]))
+            {
+                ft_putstr_fd("Error : There are duplicates\n", 2);
+                exit (1);
+            }
+            i++;
+        }
+        j++;
+    }
+}
+
 void	check_arguments(int ac, char **av)
 {
     check_is_digit(ac, av);
-    check_is_int(ac, av); // Done with this function
-    // now we can do other things like checking for duplicates
+    check_is_int(ac, av);
+    check_for_duplicates(ac, av);
 }
