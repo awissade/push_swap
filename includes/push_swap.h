@@ -15,7 +15,10 @@
 
 #include "../libft/libft.h"
 #include <stdlib.h>
+#include <limits.h>
 #include <stdio.h> // remove this line after debugging
+
+
 
 typedef struct s_stack
 {
