@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   initialize_stacks.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awissade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/18 02:19:24 by awissade          #+#    #+#             */
-/*   Updated: 2024/03/22 02:35:11 by awissade         ###   ########.fr       */
+/*   Created: 2024/03/23 17:58:53 by awissade          #+#    #+#             */
+/*   Updated: 2024/03/23 18:00:21 by awissade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../includes/push_swap.h"
 
-int	main(int ac, char **av)
+void	initialize_stacks(int ac, char **av)
 {
-	if (ac < 2)
-	{
-		ft_putstr_fd("Error : No arguments\n", 2);
-		exit (1);
-	}
-	check_arguments(ac, av); // Done with this function
-	initialize_stacks(ac, av); // I'm working on this function
-	printf("DONE\n");
-	return (0);
+    t_stack *stack_a;
+    t_stack *stack_b;
+
+    stack_a = (t_stack *)malloc(sizeof(t_stack));
+    stack_b = (t_stack *)malloc(sizeof(t_stack));
+    if (!stack_a || !stack_b)
+    {
+        ft_putchar_fd("Error : Malloc failed\n", 2);
+        exit(1);
+    }
+    
 }
+
