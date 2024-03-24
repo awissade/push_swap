@@ -19,7 +19,7 @@ int	main(int ac, char **av)
 		ft_putstr_fd("Error : No arguments\n", 2);
 		exit (1);
 	}
-	check_arguments(ac, av); // Done with this function
+	check_arguments(ac, av);
 	initialize_stacks(ac, av); // I'm working on this function
 	printf("DONE\n");
 	return (0);
